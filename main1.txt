@@ -1,0 +1,107 @@
+from tkinter import * # For making GUI model
+from tkinter import ttk #Stylish toolkit 
+from PIL import Image,ImageTk #for images we use PILLOW library
+
+
+class Face_Recognition_System:
+    def __init__(self,root): # This is constructor
+        self.root=root
+        self.root.geometry("1530x790+0+0") #Height and width of window
+        self.root.title("Face Recognition System")
+
+        #College-picture
+        college=Image.open("Background-image\College-picture.jpeg")
+        college=college.resize((1561,300),Image.ANTIALIAS)
+        self.photoimg=ImageTk.PhotoImage(college)
+        
+        first_label=Label(self.root,image=self.photoimg)
+        first_label.place(x=0,y=0,width=1561,height=250) #To show on window
+
+        #College-logo
+        college_logo=Image.open("Background-image\Logo-DTC-1.png")
+        college_logo=college_logo.resize((617,150),Image.ANTIALIAS)
+        self.background=ImageTk.PhotoImage(college_logo)
+        
+        second_label=Label(self.root,image=self.background)
+        second_label.place(x=450,y=400,width=617,height=150) 
+
+        #Buttons
+        student_details=Image.open("Button-icons\student-details.png")
+        student_details= student_details.resize((100,100),Image.ANTIALIAS)
+        self.student_details_button=ImageTk.PhotoImage( student_details)
+
+        button_1=Button(image= self.student_details_button,cursor="hand2")
+        button_1.place(x=100,y=300,width=100,height=100)
+
+        button_student_details=Button(text="Student Details",cursor="hand2",font=("times new roman",10),bg="blue",fg="white")
+        button_student_details.place(x=100,y=390,width=100,height=30)
+
+        # #2-button
+        # face_recognition=Image.open("Button-icons\face-recognition-icon.jpeg")
+        # face_recognition= face_recognition.resize((100,100),Image.ANTIALIAS)
+        # self.face_recognition_button=ImageTk.PhotoImage(face_recognition)
+
+        # button_2=Button(image= self.student_details_button,cursor="hand2")
+        # button_2.place(x=300,y=300,width=100,height=100)
+
+        # button_face_recognition=Button(text="Face Recognition",cursor="hand2",font=("times new roman",10),bg="blue",fg="white")
+        # button_face_recognition.place(x=300,y=390,width=100,height=30)
+
+        #3-button
+        student_details=Image.open("Button-icons\student-details.png")
+        student_details= student_details.resize((100,100),Image.ANTIALIAS)
+        self.student_details_button=ImageTk.PhotoImage( student_details)
+
+        button_1=Button(image= self.student_details_button,cursor="hand2")
+        button_1.place(x=100,y=300,width=100,height=100)
+
+        button_student_details=Button(text="Student Details",cursor="hand2",font=("times new roman",10),bg="blue",fg="white")
+        button_student_details.place(x=100,y=390,width=100,height=30)
+
+        #4
+        student_details=Image.open("Button-icons\student-details.png")
+        student_details= student_details.resize((100,100),Image.ANTIALIAS)
+        self.student_details_button=ImageTk.PhotoImage( student_details)
+
+        button_1=Button(image= self.student_details_button,cursor="hand2")
+        button_1.place(x=100,y=300,width=100,height=100)
+
+        button_student_details=Button(text="Student Details",cursor="hand2",font=("times new roman",10),bg="blue",fg="white")
+        button_student_details.place(x=100,y=390,width=100,height=30)
+
+        #5
+        student_details=Image.open("Button-icons\student-details.png")
+        student_details= student_details.resize((100,100),Image.ANTIALIAS)
+        self.student_details_button=ImageTk.PhotoImage( student_details)
+
+        button_1=Button(image= self.student_details_button,cursor="hand2")
+        button_1.place(x=100,y=300,width=100,height=100)
+
+        button_student_details=Button(text="Student Details",cursor="hand2",font=("times new roman",10),bg="blue",fg="white")
+        button_student_details.place(x=100,y=390,width=100,height=30)
+
+        #6
+        student_details=Image.open("Button-icons\student-details.png")
+        student_details= student_details.resize((100,100),Image.ANTIALIAS)
+        self.student_details_button=ImageTk.PhotoImage( student_details)
+
+        button_1=Button(image= self.student_details_button,cursor="hand2")
+        button_1.place(x=100,y=300,width=100,height=100)
+
+        button_student_details=Button(text="Student Details",cursor="hand2",font=("times new roman",10),bg="blue",fg="white")
+        button_student_details.place(x=100,y=390,width=100,height=30)
+
+if __name__== "__main__": #Calling main function
+    root=Tk()
+    obj=Face_Recognition_System(root)
+    root.mainloop()
+    
+
+
+
+
+
+
+
+
+
